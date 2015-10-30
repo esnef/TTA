@@ -1,0 +1,208 @@
+/*
+ * $Id: objects.js Oct 13, 2015 3:04:24 PM tta1516$
+ * 
+ * Copyright (C) 2015 Maider Huarte Arrayago
+ * 
+ * This file is part of TTA1516_LS-EX_08v7_www.zip.
+ * 
+ * TTA1516_LS-EX_08v7_www.zip is based on templates by Eclipse.org - Thym and it is intended
+ * for learning purposes only.
+ * 
+ * TTA1516_LS-EX_08v7_www.zip is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ * 
+ * TTA1516_LS-EX_08v7_www.zip is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details
+ * <http://www.gnu.org/licenses/>.
+ */
+
+var appConstants = {
+	serverURL: "http://158.227.64.60:8080/"+"Example_8S/", //EHU WIFI
+	localPermanentStorageFolder: "/sdcard/eus.ehu.INTEL901_504021.TTA1516_LS_EX_08v7/"
+};
+
+var tests = {
+	login: null,
+	total: 3,
+	test: [
+	       {
+	    	   	question: "Bla bla bla?",
+	    	   	resp: [
+	    	          "Response 0-A",
+	    	          "Response 0-B",
+	    		      "Response 0-C",
+	    		      "Response 0-D"
+	    		      ],
+	    		correct: "1",
+	    		adv: [
+	    	          appConstants.serverURL+"audio/ADV_0_0.ogg",
+	    	          "",
+	    	          appConstants.serverURL+"docs/ADV_0_2.pdf",
+	    	          appConstants.serverURL
+	    		     ]
+	       },
+	       {
+	    	   	question: "Ble ble ble?",
+	    	   	resp: [
+	    	          "Response 1-A",
+	    	          "Response 1-B",
+	    		      "Response 1-C",
+	    		      "Response 1-D"
+	    		      ],
+	    		correct: "3",
+	    		adv: [
+	    	          "http://ehutb-flash1-pro.ehu.es/downloads//ehutv/2014/mp4_11729_2059213788.mp4",
+	    	          "Advice 1-B",
+	    	          appConstants.serverURL+"docs/ADV_1_3.zip",
+	    		      ""
+	    		     ]	      
+	       },
+	       {
+	    	   	question: "Bli bli bli?",
+	    	   	resp: [
+	    	          "Response 2-A",
+	    	          "Response 2-B",
+	    		      "Response 2-C",
+	    		      "Response 2-D"
+	    		      ],
+	    		correct: "0",
+	    		adv: [
+	    	          "",
+	    	          appConstants.serverURL+"img/ADV_2_1.jpg",
+	    	          appConstants.serverURL+"img/ADV_2_2.png",
+	    		      "Advice 2-D"
+	    		     ]
+	       }
+	 ]
+};
+
+var results = {
+	login: null,
+	corrects: 0,
+	answered: 0
+};
+
+var page = {
+	create: function(i) {
+//		alert("create1");
+		var pageDiv=$('<div data-role="page" id="page-'+i+'"></div>');
+		var headerDiv=
+			'<div data-role="header" data-position="fixed" >'+
+				'<h1 style="margin-left:0;margin-right:0;white-space: nowrap;overflow: visible;">TTA1516_LS-EX_08v7: test7</h1>'+
+			'</div>';
+		
+		var contentDiv=
+			'<div data-role="content">'+
+				'<h3 class="login"></h3>'+
+				'<form id="form-'+i+'">'+
+					'<fieldset data-role="controlgroup" data-iconpos="right">'+
+					'<legend id="question-'+i+'"></legend>'+
+					'<input name="radio-choice-'+i+'" id="radio-choice-'+i+'a" data-mini="true" value="0" type="radio"/>'+
+					'<label for="radio-choice-'+i+'a" id="label-radio-choice-'+i+'-0"></label>'+
+					'<input name="radio-choice-'+i+'" id="radio-choice-'+i+'b" data-mini="true" value="1" type="radio"/>'+
+					'<label for="radio-choice-'+i+'b" id="label-radio-choice-'+i+'-1"></label>'+
+					'<input name="radio-choice-'+i+'" id="radio-choice-'+i+'c" data-mini="true" value="2" type="radio"/>'+
+					'<label for="radio-choice-'+i+'c" id="label-radio-choice-'+i+'-2"></label>'+
+					'<input name="radio-choice-'+i+'" id="radio-choice-'+i+'d" data-mini="true" value="3" type="radio"/>'+
+					'<label for="radio-choice-'+i+'d" id="label-radio-choice-'+i+'-3"></label>'+
+					'</fieldset>'+
+					'<div style="text-align:center;">'+
+						'<a href="" id="button-'+i+'-1" class="ui-btn ui-btn-inline ui-corner-all" onclick="check('+i+')">CHECK</a>'+
+						'<a href="" id="button-'+i+'-2" class="ui-btn ui-btn-inline ui-corner-all" style="display:none;" onclick="">ADVICE</a>'+						
+					'</div>'+
+				'</form>'+
+				'<div id="audioAdvice-'+i+'" style="display:none;">'+
+					'AUDIO ADVICE'+
+					'<audio id="audio-'+i+'" controls="controls">'+
+						'<source id="src-audio-'+i+'" src=""/>'+
+					'</audio>'+
+				'</div>'+						
+				'<div id="videoAdvice-'+i+'" style="display:none;">'+
+					'VIDEO ADVICE'+
+					'<video id="video-'+i+'" controls="controls" width="100%" height="auto">'+						
+						'<source id="src-video-'+i+'" src="" type="video/mp4"/>'+
+					'</video>'+
+				'</div>'+
+				'<div id="imageAdvice-'+i+'" style="display:none;">'+
+					'<img id="image-'+i+'" alt="" src="" width="auto" height="auto" style="border: black 1px solid;"/>'+
+				'</div>'+				
+			'</div>';
+		
+		var footerDiv=
+			'<div data-role="footer" data-position="fixed">'+
+				'<div class="ui-grid-b" style="width:80%; text-align:center; font-weight:normal;">'+
+					'<div class="ui-block-a">RESULTS: </div>'+
+					'<div class="ui-block-b res-1" id="res-'+i+'-1"></div>'+
+					'<div class="ui-block-c res-2" id="res-'+i+'-2"></div>'+
+				'</div>'+			
+				'<h4>2015-2016 TTA</h4>'+
+				'<a href="#" id="prev-'+i+'" class="ui-btn ui-mini ui-corner-all ui-icon-arrow-l ui-btn-icon-left" data-transition="turn">Prev</a>'+
+				'<a href="#" id="next-'+i+'" class="ui-btn ui-mini ui-corner-all ui-icon-arrow-r ui-btn-icon-left" data-transition="turn">Next</a>'+
+			'</div>';
+		
+		pageDiv.append(headerDiv,contentDiv,footerDiv);
+		
+//		alert("create2");
+		return pageDiv;
+	},
+	load: function(i) {
+//		alert("load1");
+		
+     	$("#question-"+i).text("QUESTION "+i+": "+tests.test[i].question);
+    	
+     	$("label[id|='label-radio-choice-"+i+"']").each(
+     			function(index) {     				
+     				$(this).text(tests.test[i].resp[index]);     				
+    		    }
+     	);
+     	
+     	$("#prev-"+i).attr("href","#page-"+(i-1));
+     	$("#next-"+i).attr("href","#page-"+(i+1));
+//		alert("load7");
+ 	}
+};
+
+var fileUtilities = {
+	downloadOpenPDf: function (url,folder,fileName) {
+	    window.resolveLocalFileSystemURL(
+	    		"file://"+folder+fileName,//Comprobar si el fichero está en folder+fileName
+				function(){//función successCallback: si el fichero YA está en la ubicación
+					cordova.InAppBrowser.open("file://"+folder+fileName,"_system","location=yes");//abrir nueva ventana del navegador del sistema, para mostrar el fichero
+				},
+				function(){//función errorCallback: si el fichero NO está en la ubicación
+		    		var ft=new FileTransfer();//Crear objeto FileTransfer
+		    		ft.download(url,folder+fileName,//Descargar fichero indicado por URL al folder+fileName indicado
+		    			function() {//función successCallback: si el fichero se descargó bien
+							alert("Fichero descargado en "+folder+fileName);//indicar al usuario que el fichero ha sido descargado en folder+fileName
+							cordova.InAppBrowser.open("file://"+folder+fileName,"_system","location=yes");//abrir nueva ventana del navegador del sistema, para mostrar el fichero
+						,
+						function(error){//función errorCallback: si el fichero NO se descargó bien
+							alert("Error al descargar: "+error.code);//indicar al usuario el error de descarga
+						}
+		    		);
+		    	}
+	    );		
+	},
+	downloadOpenZIP: function (url,folder,fileName) {
+	    (//Comprobar si el fichero está en folder+fileName
+				{//función successCallback: si el fichero está en la ubicación
+					//descomprimir en la misma carpeta e indicarlo cuando se termine
+				},
+				{//función errorCallback: si el fichero NO está en la ubicación
+		    		//Crear objeto FileTransfer
+		    		(//Descargar fichero indicado por URL al folder+fileName indicado
+		    			{//función successCallback: si el fichero se descargó bien
+							//indicar al usuario que el fichero ha sido descargado en folder+fileName
+							//descomprimir en la misma carpeta e indicarlo cuando se termine
+						,
+						{//función errorCallback: si el fichero NO se descargó bien
+							//indicar al usuario el error de descarga
+						}
+		    		);
+		    	}
+	    );
+	}
+};

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width;" />
+		<!-- SE implementa cordova con la carga de cordova.js -->
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+		<script type="text/javascript" charset="utf-8">
+		function onBodyLoad() {
+			//Con esto se esta dicioen que cuando este cargado la app, se realiza una espera de un evento
+			//y de la misma doma que se ejecute onDeviceReady
+			document.addEventListener("deviceready",onDeviceReady,false);
+		}
+		function onDeviceReady() {
+			alert("Cordova is ready!");
+		}
+		</script>
+        <title>TTA1516_LS-EX_02</title>
+	</head>
+	<body onload="onBodyLoad()">
+		<h1>Hello World 2</h1>
+		<p>This is a sample Cordova application.</p>
+	</body>
+</html>

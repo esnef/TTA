@@ -1,0 +1,93 @@
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2015-07-08 14:52:13.610
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2015-07-08 14:52:22.436
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2015-07-08 14:52:22.456
+!MESSAGE Module ZERBITZARIA_1_REST-XML on WildFly 8.x TTA not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298244 2015-07-08 14:54:54.252
+!MESSAGE Incremental publish failed for module ZERBITZARIA_1_REST-XML
+!SUBENTRY 1 org.jboss.ide.eclipse.as.rse.core 4 1644298251 2015-07-08 14:54:54.252
+!MESSAGE failed to create folder /home/alumno/Escritorio/504021/wildfly-8.2.0.Final.Tta/standalone/deployments/ZERBITZARIA_1_REST-XML.war/WEB-INF/classes/datuak on host Local
+!STACK 0
+org.eclipse.rse.services.files.RemoteFileIOException: Operation failed. File system input or output error
+	at org.eclipse.rse.internal.services.local.files.LocalFileService.createFolder(LocalFileService.java:1121)
+	at org.jboss.ide.eclipse.as.rse.core.subsystems.RSEFilesystemController$3.run(RSEFilesystemController.java:107)
+	at org.jboss.tools.foundation.core.jobs.BarrierProgressWaitJob.run(BarrierProgressWaitJob.java:85)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.jboss.ide.eclipse.as.rse.core 4 1644298251 2015-07-08 14:54:54.252
+!MESSAGE failed to create folder /home/alumno/Escritorio/504021/wildfly-8.2.0.Final.Tta/standalone/deployments/ZERBITZARIA_1_REST-XML.war/WEB-INF/classes/datuak on host Local
+!STACK 0
+org.eclipse.rse.services.files.RemoteFileIOException: Operation failed. File system input or output error
+	at org.eclipse.rse.internal.services.local.files.LocalFileService.createFolder(LocalFileService.java:1121)
+	at org.jboss.ide.eclipse.as.rse.core.subsystems.RSEFilesystemController$3.run(RSEFilesystemController.java:107)
+	at org.jboss.tools.foundation.core.jobs.BarrierProgressWaitJob.run(BarrierProgressWaitJob.java:85)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298244 2015-07-08 14:56:22.015
+!MESSAGE Incremental publish failed for module ZERBITZARIA_1_REST-XML
+!SUBENTRY 1 org.jboss.ide.eclipse.as.rse.core 4 1644298251 2015-07-08 14:56:22.015
+!MESSAGE failed to create folder /home/alumno/Escritorio/504021/wildfly-8.2.0.Final.Tta/standalone/deployments/ZERBITZARIA_1_REST-XML.war/WEB-INF/classes/datuak on host Local
+!STACK 0
+org.eclipse.rse.services.files.RemoteFileIOException: Operation failed. File system input or output error
+	at org.eclipse.rse.internal.services.local.files.LocalFileService.createFolder(LocalFileService.java:1121)
+	at org.jboss.ide.eclipse.as.rse.core.subsystems.RSEFilesystemController$3.run(RSEFilesystemController.java:107)
+	at org.jboss.tools.foundation.core.jobs.BarrierProgressWaitJob.run(BarrierProgressWaitJob.java:85)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.jboss.ide.eclipse.as.rse.core 4 1644298251 2015-07-08 14:56:22.016
+!MESSAGE failed to create folder /home/alumno/Escritorio/504021/wildfly-8.2.0.Final.Tta/standalone/deployments/ZERBITZARIA_1_REST-XML.war/WEB-INF/classes/datuak on host Local
+!STACK 0
+org.eclipse.rse.services.files.RemoteFileIOException: Operation failed. File system input or output error
+	at org.eclipse.rse.internal.services.local.files.LocalFileService.createFolder(LocalFileService.java:1121)
+	at org.jboss.ide.eclipse.as.rse.core.subsystems.RSEFilesystemController$3.run(RSEFilesystemController.java:107)
+	at org.jboss.tools.foundation.core.jobs.BarrierProgressWaitJob.run(BarrierProgressWaitJob.java:85)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298244 2015-07-08 14:58:09.454
+!MESSAGE Incremental publish failed for module ZERBITZARIA_1_REST-XML
+!SUBENTRY 1 org.jboss.ide.eclipse.as.rse.core 4 1644298251 2015-07-08 14:58:09.454
+!MESSAGE failed to create folder /home/alumno/Escritorio/504021/wildfly-8.2.0.Final.Tta/standalone/deployments/ZERBITZARIA_1_REST-XML.war/WEB-INF/classes/datuak on host Local
+!STACK 0
+org.eclipse.rse.services.files.RemoteFileIOException: Operation failed. File system input or output error
+	at org.eclipse.rse.internal.services.local.files.LocalFileService.createFolder(LocalFileService.java:1121)
+	at org.jboss.ide.eclipse.as.rse.core.subsystems.RSEFilesystemController$3.run(RSEFilesystemController.java:107)
+	at org.jboss.tools.foundation.core.jobs.BarrierProgressWaitJob.run(BarrierProgressWaitJob.java:85)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.jboss.ide.eclipse.as.rse.core 4 1644298251 2015-07-08 14:58:09.455
+!MESSAGE failed to create folder /home/alumno/Escritorio/504021/wildfly-8.2.0.Final.Tta/standalone/deployments/ZERBITZARIA_1_REST-XML.war/WEB-INF/classes/datuak on host Local
+!STACK 0
+org.eclipse.rse.services.files.RemoteFileIOException: Operation failed. File system input or output error
+	at org.eclipse.rse.internal.services.local.files.LocalFileService.createFolder(LocalFileService.java:1121)
+	at org.jboss.ide.eclipse.as.rse.core.subsystems.RSEFilesystemController$3.run(RSEFilesystemController.java:107)
+	at org.jboss.tools.foundation.core.jobs.BarrierProgressWaitJob.run(BarrierProgressWaitJob.java:85)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2015-07-08 15:21:24.967
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842785 2015-07-08 15:21:29.401
+!MESSAGE Server Shutdown Succeeded
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2015-10-23 15:28:04.896
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2015-10-23 15:28:13.261
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2015-10-23 15:28:13.266
+!MESSAGE Module Example_8S on WildFly 8.x TTA not yet fully deployed. Waiting...
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2015-10-26 17:54:36.550
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2015-10-26 17:54:46.197
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2015-10-26 17:54:46.202
+!MESSAGE Module example9S on WildFly 8.x TTA not yet fully deployed. Waiting...
