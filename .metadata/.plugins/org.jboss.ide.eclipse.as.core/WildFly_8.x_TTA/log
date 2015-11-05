@@ -91,3 +91,16 @@ org.eclipse.rse.services.files.RemoteFileIOException: Operation failed. File sys
 
 !ENTRY org.jboss.ide.eclipse.as.core 1 0 2015-10-26 17:54:46.202
 !MESSAGE Module example9S on WildFly 8.x TTA not yet fully deployed. Waiting...
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2015-11-05 15:43:03.224
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2015-11-05 15:43:12.978
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2015-11-05 15:43:13.016
+!MESSAGE Module Example_8S on WildFly 8.x TTA not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2015-11-05 15:43:40.594
+!MESSAGE Module example11S on WildFly 8.x TTA not yet fully deployed. Waiting...

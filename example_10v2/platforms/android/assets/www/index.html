@@ -1,0 +1,77 @@
+<!-- $Id: index.html Oct 28, 2015 3:06:26 PM tta1516$
+
+ Copyright (C) 2015 Maider Huarte Arrayago
+
+ This file is part of TTA1516_LS-EX_10v2_www.zip.
+
+ TTA1516_LS-EX_10v2_www.zip is based on templates by Eclipse.org - Thym and it is
+ intended for learning purposes only.
+ 
+ TTA1516_LS-EX_10v2_www.zip is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ TTA1516_LS-EX_10v2_www.zip is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details <http://www.gnu.org/licenses/>.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+   		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
+    	<script src="js/jquery-2.0.2.js"></script>
+    	<script src="js/jquery.mobile-1.4.5.min.js"></script> 
+    	<script src="js/jquery.imagefit-0.2.js"></script>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <title>TTA1516_LS-EX_10v2</title>
+    </head>
+    <body>
+		<div data-role="page" id="page-0" style="">
+			<div data-role="header" style="padding-bottom:1%" data-position="fixed" data-fullscreen="false">
+				<h1 style="margin-left:0;margin-right:0;white-space: nowrap;overflow: visible;">TTA1516_LS-EX_10v2: exercises5</h1>
+			</div>
+			<div data-role="content" id="pageContent-0" style="text-align:center;">
+				<div id="loginDiv" class="ui-field-contain ui-hide-label" style="margin:5px 5%;">
+					<label for="text-0-1">Login:</label>
+					<input name="text-0-1" id="login" data-clear-btn="true" value="" type="text" placeholder="Enter your login" />
+					<a href="" id="button-1" class="ui-btn ui-btn-inline ui-corner-all"	onclick="login()">LOGIN</a>
+					<a href="" id="button-2" class="ui-btn ui-btn-inline ui-corner-all"	onclick="loadContents()" style="display:none">KEEP LOGIN</a>
+				</div>
+		        <h3 class="login" style="text-align:left;"></h3>
+				<div id="statementDiv-0" style="text-align:left;display:none">
+				</div>
+				<div id="solutionDiv-0" class="ui-grid-solo" style="display:none;">
+					<div class="ui-block-a" style="text-align:center;vertical-align:middle;">
+						<a href="#" id="button-0-1" class="ui-btn ui-mini ui-btn-inline ui-corner-all" onclick="takePhoto(0)">TAKE PHOTO</a>
+						<label for="image-0-1" id="fileName-0-1" style="text-align:left;word-wrap:break-word;"></label>
+						<img id="image-0-1" alt="" src="" style="display:none;width:auto;height:auto;"/>
+					</div>		
+					<div class="ui-block-a" style="text-align:center;vertical-align:middle;">
+						<a href="#" id="button-0-2" class="ui-btn ui-mini ui-btn-inline ui-corner-all" onclick="sendResult(0)">SEND PHOTO</a>
+					</div>			
+					<div class="ui-block-a" style="text-align:center;vertical-align:middle;">
+						<a href="#" id="button-0-3" class="ui-btn ui-mini ui-btn-inline ui-corner-all" onclick="queryCalification(0)">QUERY CALIFICATION</a>
+						<p id="calification-0">CALIFICATION: NONE</p>
+					</div>				
+				</div>		        
+			</div>				
+			<div data-role="footer" data-position="fixed" style="padding-top:1%;">
+				<div class="ui-grid-b">
+					<div class="ui-block-a" style="text-align:left;width:20%;"></div>
+					<div class="ui-block-b" style="text-align:center;width:60%;"><a class="ui-btn ui-mini ui-btn-inline ui-corner-all" onclick="saveWork()">SAVE</a></div>
+					<div class="ui-block-c" style="text-align:right;width:20%;"><a href="#page-1" id="next-0" class="ui-btn ui-icon-arrow-r ui-btn-icon-left ui-mini ui-btn-inline ui-corner-all" data-transition="turn">Next</a></div>
+				</div>
+			</div>
+		</div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/objects.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>		
+    </body>    
+</html>
