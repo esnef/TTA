@@ -180,7 +180,7 @@ function addStudent() {
 	var dni=$("#newStudentDiv-text-1").val();
 	var name=$("#newStudentDiv-text-2").val();
 	var surname=$("#newStudentDiv-text-3").val();
-	/*
+	
 	if((dni!=null&&dni!="")&&(name!=null&&name!="")&&(surname!=null&&surname!="")) {	
 		student.dni=dni;
 		student.name=name;
@@ -210,6 +210,6 @@ function addStudent() {
 	else
 		alert("All fields are required");
 	
-//	alert("addStudent 2");*/
+//	alert("addStudent 2");
 }
 

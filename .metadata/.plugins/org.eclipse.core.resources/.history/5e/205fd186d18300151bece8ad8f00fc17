@@ -65,16 +65,16 @@ function loadInitalElements() {
 	if(navigator.connection.type!=Connection.WIFI)
 		proceed=confirm("Need to connect to remote URL. Proceed whitout WIFI connection?");	
 	if(proceed==true) {
-		$.getJSON(appConstants.requestLessonsURL(),//Consultar en el Servidor las lecciones disponibles
+		(//Consultar en el Servidor las lecciones disponibles
 			function(response,status) {//Función callback
-				if(status=="success"){//Si la HTTP-RESPONSE es OK
+				{//Si la HTTP-RESPONSE es OK
 					var lessonsSelect=	'<label for="select-1" style="margin-top:15px;margin-bottom:5px;">Lessons:</label>'+
 										'<select name="select-lesson" id="select-lesson" data-iconpos="right">';
-					for(var i=0;i<response.lesson.length;i++)//Por cada lección recibida
+					//Por cada lección recibida
 						lessonsSelect+='<option value="'+response.lesson[i].lessonCode+'">'+response.lesson[i].lessonCode+': '+response.lesson[i].title+'</option>';
 		
 					lessonsSelect+='</select>';
-					$("#loginDiv").prepend(lessonsSelect);//Introducir el menú de lecciones en loginDiv, al principio
+					//Introducir el menú de lecciones en loginDiv, al principio
 					$("body").enhanceWithin();			
 				}
 				else
